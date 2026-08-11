@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Veja o resultado da sua análise de compatibilidade profissional.">
+  <title>Resultado | NexaMatch</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="resultado">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="NexaMatch, página inicial"><img src="images/logo.svg" alt="" width="44" height="44"><span>Nexa<span>Match</span></span></a>
+      <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+        <a href="index.html" data-nav="home">Início</a>
+        <a class="button button-small" href="analisar.html" data-nav="analisar">Nova análise</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="result-main">
+    <section id="result-content" class="section" hidden>
+      <div class="container">
+        <div class="result-heading">
+          <div>
+            <span class="eyebrow">Resultado da análise</span>
+            <h1><span data-result-name>Seu perfil</span> × <span data-result-job>a vaga</span></h1>
+            <p>Use este diagnóstico para organizar sua candidatura e seus próximos estudos.</p>
+          </div>
+          <button id="print-result" class="button button-ghost" type="button">Imprimir resultado</button>
+        </div>
+
+        <div class="result-overview">
+          <article class="score-card">
+            <div class="score-ring" data-score-ring style="--score: 0">
+              <div><strong data-result-score>0%</strong><span>compatível</span></div>
+            </div>
+            <span class="result-level" data-result-level>Em análise</span>
+            <p data-result-message></p>
+          </article>
+
+          <img class="result-image" src="images/resultado.webp" alt="Profissional comemorando um resultado positivo diante do notebook" width="1600" height="1067">
+
+          <article class="summary-card">
+            <h2>Resumo</h2>
+            <div><span>Requisitos identificados</span><strong data-total-required>0</strong></div>
+            <div><span>Competências encontradas</span><strong data-total-matched>0</strong></div>
+            <div><span>Pontos para desenvolver</span><strong data-total-missing>0</strong></div>
+          </article>
+        </div>
+
+        <div class="result-columns">
+          <article class="result-list-card success-card">
+            <div class="card-title"><span>✓</span><div><h2>Você já possui</h2><p>Competências localizadas nos dois textos.</p></div></div>
+            <div class="tag-list" data-matched-list></div>
+          </article>
+          <article class="result-list-card attention-card">
+            <div class="card-title"><span>!</span><div><h2>Vale desenvolver</h2><p>Requisitos citados na vaga e ausentes no perfil.</p></div></div>
+            <div class="tag-list" data-missing-list></div>
+          </article>
+        </div>
+
+        <article class="recommendations-card">
+          <span class="eyebrow">Próximos passos</span>
+          <h2>Como usar este resultado</h2>
+          <div class="recommendations-grid" data-recommendations></div>
+        </article>
+
+        <div class="result-actions">
+          <a class="button" href="analisar.html">Analisar outra vaga</a>
+          <a class="button button-secondary" href="index.html">Voltar ao início</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="empty-result" class="empty-state section" hidden>
+      <div class="container empty-card">
+        <img src="images/resultado.webp" alt="Profissional trabalhando diante do notebook" width="1600" height="1067">
+        <div><span class="eyebrow">Nenhuma análise encontrada</span><h1>Primeiro, precisamos conhecer a vaga.</h1><p>Preencha seu perfil e a descrição da oportunidade para gerar um resultado.</p><a class="button" href="analisar.html">Analisar uma vaga</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer compact-footer">
+    <div class="container footer-grid">
+      <a class="brand brand-footer" href="index.html"><img src="images/logo.svg" alt="" width="38" height="38"><span>Nexa<span>Match</span></span></a>
+      <p>Resultado orientativo baseado em palavras-chave.</p>
+      <p class="copyright">© <span data-current-year></span> NexaMatch</p>
+    </div>
+  </footer>
+</body>
+</html>

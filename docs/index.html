@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compare suas competências com vagas de tecnologia e descubra onde concentrar seus estudos.">
+  <title>NexaMatch | Encontre vagas compatíveis com você</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="NexaMatch, página inicial">
+        <img src="images/logo.svg" alt="" width="44" height="44">
+        <span>Nexa<span>Match</span></span>
+      </a>
+
+      <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+        <a href="index.html" data-nav="home">Início</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a class="button button-small" href="analisar.html" data-nav="analisar">Analisar vaga</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Análise simples, decisão mais clara</span>
+          <h1>Descubra o quanto uma vaga combina com você.</h1>
+          <p>Salve suas competências uma vez e compare-as com diferentes vagas de tecnologia. Depois, basta colar os requisitos para descobrir seus pontos fortes e o que ainda pode desenvolver.</p>
+          <div class="hero-actions">
+            <a class="button" href="analisar.html">Analisar uma vaga</a>
+            <a class="text-link" href="#como-funciona">Entender como funciona <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="trust-row" aria-label="Vantagens do NexaMatch">
+            <span>✓ Gratuito</span>
+            <span>✓ Sem cadastro</span>
+            <span>✓ Perfil salvo só no navegador</span>
+          </div>
+        </div>
+
+        <div class="hero-media reveal">
+          <img src="images/banner.webp" alt="Candidata entregando currículo durante uma conversa profissional" width="1600" height="824">
+          <div class="floating-card score-preview" aria-hidden="true">
+            <span>Compatibilidade</span>
+            <strong>82%</strong>
+            <div><i style="width: 82%"></i></div>
+          </div>
+          <div class="floating-card skill-preview" aria-hidden="true">
+            <span class="status-dot"></span>
+            JavaScript encontrado
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section section-soft">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Como funciona</span>
+          <h2>Três passos para entender sua compatibilidade</h2>
+          <p>O resultado é uma orientação inicial baseada em palavras-chave, não uma garantia de contratação.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card reveal">
+            <span class="step-number">01</span>
+            <h3>Informe suas competências</h3>
+            <p>Na primeira utilização, liste tecnologias, ferramentas e conhecimentos que você realmente possui.</p>
+          </article>
+          <article class="step-card reveal">
+            <span class="step-number">02</span>
+            <h3>Cole somente a vaga</h3>
+            <p>Depois que o perfil estiver salvo, use o texto completo para identificar os requisitos.</p>
+          </article>
+          <article class="step-card reveal">
+            <span class="step-number">03</span>
+            <h3>Leia seu diagnóstico</h3>
+            <p>Veja a pontuação, os termos encontrados e os conhecimentos que merecem atenção.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-section">
+        <div class="image-stack reveal">
+          <img class="main-image" src="images/colaboracao.webp" alt="Duas profissionais analisando código juntas em um notebook" width="1600" height="1068" loading="lazy">
+          <div class="mini-stat" aria-hidden="true"><strong>+ clareza</strong><span>para priorizar candidaturas</span></div>
+        </div>
+        <div class="content-block reveal">
+          <span class="eyebrow">Feito para quem está começando</span>
+          <h2>Candidate-se com mais intenção, não apenas em maior quantidade.</h2>
+          <p>Nem toda exigência de uma vaga é eliminatória. O NexaMatch organiza as informações para ajudar você a decidir onde já possui uma boa base e quais lacunas podem ser estudadas.</p>
+          <ul class="check-list">
+            <li>Identifique competências mencionadas pela empresa.</li>
+            <li>Descubra termos importantes que faltam no seu perfil.</li>
+            <li>Receba recomendações objetivas para o próximo passo.</li>
+          </ul>
+          <a class="button button-secondary" href="analisar.html">Fazer minha primeira análise</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section community-section">
+      <div class="container community-card reveal">
+        <img src="images/comunidade.webp" alt="Equipe de desenvolvedores trabalhando em conjunto" width="1600" height="1067" loading="lazy">
+        <div>
+          <span class="eyebrow eyebrow-light">Construído para a comunidade</span>
+          <h2>Uma ferramenta para estudantes compartilharem e evoluírem juntos.</h2>
+          <p>Use o resultado como ponto de partida para conversar com colegas, professores e profissionais da sua rede.</p>
+          <a class="button button-light" href="analisar.html">Começar agora</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <a class="brand brand-footer" href="index.html">
+        <img src="images/logo.svg" alt="" width="38" height="38">
+        <span>Nexa<span>Match</span></span>
+      </a>
+      <p>Projeto acadêmico criado para orientar estudantes na leitura de vagas de tecnologia.</p>
+      <p class="copyright">© <span data-current-year></span> NexaMatch</p>
+    </div>
+  </footer>
+</body>
+</html>
