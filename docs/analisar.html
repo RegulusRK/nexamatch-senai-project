@@ -1,141 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Salve seu perfil uma vez e compare-o com diferentes vagas de tecnologia.">
-  <title>Analisar vaga | NexaMatch</title>
-  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="matcher.js" defer></script>
-  <script src="script.js" defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Salve seu perfil uma vez e compare-o com diferentes vagas de tecnologia.">
+	<title>Analisar vaga | NexaMatch</title>
+	<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="matcher.js" defer></script>
+	<script src="script.js" defer></script>
 </head>
 <body data-page="analisar">
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="NexaMatch, página inicial">
-        <img src="images/logo.svg" alt="" width="44" height="44">
-        <span>Nexa<span>Match</span></span>
-      </a>
-      <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
-      <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
-        <a href="index.html" data-nav="home">Início</a>
-        <a class="button button-small" href="analisar.html" data-nav="analisar">Analisar vaga</a>
-      </nav>
-    </div>
-  </header>
+	<header class="site-header">
+		<div class="container nav-wrap">
+			<a class="brand" href="index.html" aria-label="NexaMatch, página inicial">
+				<img src="images/logo.svg" alt="" width="44" height="44">
+				<span>Nexa<span>Match</span></span>
+			</a>
+			<button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+			<nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+				<a href="index.html" data-nav="home">Início</a>
+				<a class="button button-small" href="analisar.html" data-nav="analisar">Analisar vaga</a>
+			</nav>
+		</div>
+	</header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container page-hero-grid">
-        <div>
-          <span class="eyebrow">Uma configuração, várias análises</span>
-          <h1>Depois de salvar seu perfil, basta colar a vaga.</h1>
-          <p>As competências ficam somente neste navegador e podem ser editadas quando você quiser.</p>
-        </div>
-        <img src="images/analise.webp" alt="Currículo, gráficos e notebook organizados sobre uma mesa" width="1600" height="1060">
-      </div>
-    </section>
+	<main>
+		<section class="page-hero">
+			<div class="container page-hero-grid">
+				<div>
+					<span class="eyebrow">Uma configuração, várias análises</span>
+					<h1>Depois de salvar seu perfil, basta colar a vaga.</h1>
+					<p>As competências ficam somente neste navegador e podem ser editadas quando você quiser.</p>
+				</div>
+				<img src="images/analise.webp" alt="Currículo, gráficos e notebook organizados sobre uma mesa" width="1600" height="1060">
+			</div>
+		</section>
 
-    <section class="section form-section">
-      <div class="container form-layout">
-        <div class="analysis-column">
-          <form id="profile-form" class="match-form profile-form" novalidate>
-            <div class="form-heading">
-              <span class="form-step">1</span>
-              <div><h2>Configure seu perfil uma vez</h2><p>Esses dados serão usados nas próximas comparações.</p></div>
-            </div>
+		<section class="section form-section">
+			<div class="container form-layout">
+				<div class="analysis-column">
+					<form id="profile-form" class="match-form profile-form" novalidate>
+						<div class="form-heading">
+							<span class="form-step">1</span>
+							<div><h2>Configure seu perfil uma vez</h2><p>Esses dados serão usados nas próximas comparações.</p></div>
+						</div>
 
-            <div class="field">
-              <label for="profile-name">Seu nome <span>(opcional)</span></label>
-              <input id="profile-name" name="profileName" type="text" maxlength="60" autocomplete="name" placeholder="Ex.: Rafael">
-            </div>
+						<div class="field">
+							<label for="profile-name">Seu nome <span>(opcional)</span></label>
+							<input id="profile-name" name="profileName" type="text" maxlength="60" autocomplete="name" placeholder="Ex.: Rafael">
+						</div>
 
-            <div class="field">
-              <div class="label-row">
-                <label for="profile-skills">Suas competências</label>
-                <span><strong data-count-for="profile-skills">0</strong>/1000</span>
-              </div>
-              <textarea id="profile-skills" name="profileSkills" rows="7" maxlength="1000" placeholder="Ex.: C, JavaScript, Node.js, Git, Linux, MySQL, suporte técnico..." required></textarea>
-              <small>Separe as competências com vírgulas ou escreva uma descrição curta.</small>
-              <small class="field-error" data-error-for="profile-skills"></small>
-            </div>
+						<div class="field">
+							<label for="resume-file">Curriculo</label>
+							<input type="file" accept="application/pdf" id="resume-file" name="resumeFile" > <small>Envie seu currículo em PDF ou informe suas competências manualmente abaixo.</small>
+						</div>
 
-            <div class="profile-form-actions">
-              <button id="cancel-profile-edit" class="button button-ghost" type="button" hidden>Cancelar</button>
-              <button class="button" type="submit">Salvar meu perfil</button>
-            </div>
-          </form>
+						<div class="field">
+							<div class="label-row">
+								<label for="profile-skills">Suas competências</label>
+								<span><strong data-count-for="profile-skills">0</strong>/1000</span>
+							</div>
+							<textarea id="profile-skills" name="profileSkills" rows="7" maxlength="1000" placeholder="Ex.: C, JavaScript, Node.js, Git, Linux, MySQL, suporte técnico..."></textarea>
+							<small>Separe as competências com vírgulas ou escreva uma descrição curta.</small>
+							<small class="field-error" data-error-for="profile-skills"></small>
+						</div>
 
-          <section id="profile-summary" class="profile-summary" aria-live="polite" hidden>
-            <div class="profile-icon" aria-hidden="true">✓</div>
-            <div>
-              <span>Perfil pronto</span>
-              <h2 data-profile-name>Seu perfil</h2>
-              <p><strong data-profile-count>0</strong> competências informadas. Agora você só precisa colar a vaga.</p>
-            </div>
-            <button id="edit-profile" class="button button-ghost button-small" type="button">Editar perfil</button>
-          </section>
+						<div class="profile-form-actions">
+							<button id="cancel-profile-edit" class="button button-ghost" type="button" hidden>Cancelar</button>
+							<button class="button" type="submit">Salvar meu perfil</button>
+						</div>
+					</form>
 
-          <form id="match-form" class="match-form vacancy-form" novalidate>
-            <div class="form-heading">
-              <span class="form-step">2</span>
-              <div><h2>Cole os requisitos da vaga</h2><p>O NexaMatch comparará o texto com o perfil salvo.</p></div>
-            </div>
+					<section id="profile-summary" class="profile-summary" aria-live="polite" hidden>
+						<div class="profile-icon" aria-hidden="true">✓</div>
+						<div>
+							<span>Perfil pronto</span>
+							<h2 data-profile-name>Seu perfil</h2>
+							<p><strong data-profile-count>0</strong> competências informadas. Agora você só precisa colar a vaga.</p>
+						</div>
+						<button id="edit-profile" class="button button-ghost button-small" type="button">Editar perfil</button>
+					</section>
 
-            <div class="field">
-              <label for="job-title">Título da vaga</label>
-              <input id="job-title" name="jobTitle" type="text" maxlength="100" placeholder="Ex.: Desenvolvedor Backend Júnior" required>
-              <small class="field-error" data-error-for="job-title"></small>
-            </div>
+					<form id="match-form" class="match-form vacancy-form" novalidate>
+						<div class="form-heading">
+							<span class="form-step">2</span>
+							<div><h2>Cole os requisitos da vaga</h2><p>O NexaMatch comparará o texto com o perfil salvo.</p></div>
+						</div>
 
-            <div class="field">
-              <div class="label-row">
-                <label for="job-description">Requisitos ou descrição completa</label>
-                <span><strong data-count-for="job-description">0</strong>/5000</span>
-              </div>
-              <textarea id="job-description" name="jobDescription" rows="12" maxlength="5000" placeholder="Cole aqui os requisitos, responsabilidades e diferenciais da vaga..." required></textarea>
-              <small class="field-error" data-error-for="job-description"></small>
-            </div>
+						<div class="field">
+							<label for="job-title">Título da vaga</label>
+							<input id="job-title" name="jobTitle" type="text" maxlength="100" placeholder="Ex.: Desenvolvedor Backend Júnior" required>
+							<small class="field-error" data-error-for="job-title"></small>
+						</div>
 
-            <div class="form-actions">
-              <button class="button button-ghost" id="fill-example" type="button">Preencher exemplo</button>
-              <button class="button" type="submit">Calcular compatibilidade</button>
-            </div>
+						<div class="field">
+							<div class="label-row">
+								<label for="job-description">Requisitos ou descrição completa</label>
+								<span><strong data-count-for="job-description">0</strong>/5000</span>
+							</div>
+							<textarea id="job-description" name="jobDescription" rows="12" maxlength="5000" placeholder="Cole aqui os requisitos, responsabilidades e diferenciais da vaga..." required></textarea>
+							<small class="field-error" data-error-for="job-description"></small>
+						</div>
 
-            <div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
-            <p class="privacy-note">🔒 Seu perfil fica somente neste dispositivo. A vaga analisada não é armazenada.</p>
-          </form>
-        </div>
+						<div class="form-actions">
+							<button class="button button-ghost" id="fill-example" type="button">Preencher exemplo</button>
+							<button class="button" type="submit">Calcular compatibilidade</button>
+						</div>
 
-        <aside class="tips-card">
-          <h2>Como o fluxo funciona</h2>
-          <ol class="tips-steps">
-            <li><span>1</span><p>Na primeira visita, você informa suas competências.</p></li>
-            <li><span>2</span><p>O navegador guarda seu perfil localmente.</p></li>
-            <li><span>3</span><p>Nas próximas vezes, você apenas cola a vaga.</p></li>
-          </ol>
-          <div class="tip-highlight"><strong>Privacidade</strong><p>Nenhuma conta ou banco de dados é necessário nesta versão.</p></div>
-        </aside>
-      </div>
-    </section>
-  </main>
+						<div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
+						<p class="privacy-note">🔒 Seu perfil fica somente neste dispositivo. A vaga analisada não é armazenada.</p>
+					</form>
+				</div>
 
-  <div id="loading-overlay" class="loading-overlay" hidden>
-    <div class="loader" aria-label="Analisando vaga"></div>
-    <strong>Analisando compatibilidade...</strong>
-    <span>Comparando seu perfil com os requisitos</span>
-  </div>
+				<aside class="tips-card">
+					<h2>Como o fluxo funciona</h2>
+					<ol class="tips-steps">
+						<li><span>1</span><p>Na primeira visita, você informa suas competências.</p></li>
+						<li><span>2</span><p>O navegador guarda seu perfil localmente.</p></li>
+						<li><span>3</span><p>Nas próximas vezes, você apenas cola a vaga.</p></li>
+					</ol>
+					<div class="tip-highlight"><strong>Privacidade</strong><p>Nenhuma conta ou banco de dados é necessário nesta versão.</p></div>
+				</aside>
+			</div>
+		</section>
+	</main>
 
-  <footer class="site-footer compact-footer">
-    <div class="container footer-grid">
-      <a class="brand brand-footer" href="index.html"><img src="images/logo.svg" alt="" width="38" height="38"><span>Nexa<span>Match</span></span></a>
-      <p>Projeto acadêmico para orientação profissional.</p>
-      <p class="copyright">© <span data-current-year></span> NexaMatch</p>
-    </div>
-  </footer>
+	<div id="loading-overlay" class="loading-overlay" hidden>
+		<div class="loader" aria-label="Analisando vaga"></div>
+		<strong>Analisando compatibilidade...</strong>
+		<span>Comparando seu perfil com os requisitos</span>
+	</div>
+
+	<footer class="site-footer compact-footer">
+		<div class="container footer-grid">
+			<a class="brand brand-footer" href="index.html"><img src="images/logo.svg" alt="" width="38" height="38"><span>Nexa<span>Match</span></span></a>
+			<p>Projeto acadêmico para orientação profissional.</p>
+			<p class="copyright">© <span data-current-year></span> NexaMatch</p>
+		</div>
+	</footer>
 </body>
 </html>
