@@ -16,14 +16,13 @@ Não existe cadastro, servidor, banco de dados ou instalação pelo npm nesta ve
 ```text
 nexamatch/
 ├── README.md
-└── public/
-    ├── index.html
-    ├── analisar.html
-    ├── resultado.html
-    ├── style.css
-    ├── script.js
-    ├── matcher.js       ← arquivo que Rafael criará
-    └── images/
+├── index.html
+├── analisar.html
+├── resultado.html
+├── style.css
+├── script.js
+├── matcher.js 
+└── images/
 ```
 
 ## Sua parte: criar `public/matcher.js`
